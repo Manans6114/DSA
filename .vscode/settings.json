@@ -1,0 +1,6 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "C_Cpp.errorSquiggles": "enabled",
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.guides.indentation": true
+}
