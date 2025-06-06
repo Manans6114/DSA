@@ -226,7 +226,6 @@
 
 //         if(i == arr.length){
 //             return -1;
-//         }
 
 //         // line to call last occurence index:
 
