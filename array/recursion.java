@@ -18,25 +18,25 @@
 // to print no. in descending order:
 
 
-// public class recursion {
+public class recursion {
 
-//     public static void printDec(int n) {
+    public static void printDec(int n) {
 
-//        if (n == 1) {
-//           System.out.println(1);
-//        }
+       if (n == 1) {
+          System.out.println(1);
+       }
        
-//        else {
-//           System.out.print(n + " ");
-//           printDec(n - 1);
-//        }
-//     }
+       else {
+          System.out.print(n + " ");
+          printDec(n - 1);
+       }
+    }
  
-//     public static void main(String[] args) {
-//        int n =10;
-//        printDec(n);
-//     }
-//  }
+    public static void main(String[] args) {
+       int n =10;
+       printDec(n);
+    }
+ }
  
 
 
