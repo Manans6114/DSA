@@ -18,173 +18,208 @@
 
 
 
-public class recursion {
+// public class recursion {
 
-    public static void printDec(int n) {
+//     public static void printDec(int n) {
 
-        if (n == 1) {
-            System.out.println(1);
+//         if (n == 1) {
+//             System.out.println(1);
 
-        } else {
-            System.out.print(n + " ");
-            printDec(n - 1);
-        }
-    }
+//         } else {
+//             System.out.print(n + " ");
+//             printDec(n - 1);
+//         }
+//     }
 
-    public static void main(String[] args) {
-        int n = 10;
-        printDec(n);
-    }
-}
+//     public static void main(String[] args) {
+//         int n = 10;
+//         printDec(n);
+//     }
+// }
 
 
 
 
 // printing numbers in increasing order:
 
-// public class recursion {
 
-// public static void printInc(int n) {
 
-// if (n == 1) {
-// System.out.print(n + " ");
-// return;
+
+
+// public class recursion{
+
+//     public static void printInc(int n){
+
+//         if(n == 1){
+//             System.out.println(n + " ");
+//             return;
+
+//         }else{
+//             printInc(n-1);
+//             System.out.println(n + " ");
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         printInc(10);
+//     }
 // }
-// printInc(n - 1);
-// System.out.print(n + " ");
 
-// }
 
-// public static void main(String args[]) {
 
-// printInc(10);
-// }
-// }
 
 // Factorial :
 
-// public class recursion{
 
-// public static int fact(int n){
 
-// if(n==0){
-// return 1; //firstly values get stored in the stack the when base value is
-// reached then
-// // Real work get started of implementing the formula
+// public class Recursion {
+
+//     public static int fact(int n) {
+
+//         if (n == 0) {
+//             return 1;
+//             // First, values get stored in the call stack.
+//             // When the base value (n == 0) is reached, 
+//             // the real work starts — implementing the factorial formula.
+//         }
+
+//         int fnm1 = fact(n - 1);      // Recursive call: factorial of (n-1)
+//         int fn = n * fnm1;           // Actual multiplication step: n * (n-1)!
+//         return fn;
+//     }
+
+//     public static void main(String[] args) {
+//         System.out.println(fact(5));  // Expected output: 120
+//     }
 // }
 
-// int fnm1 = fact(n-1);
-// int fn = n * fact(n-1); // factorial of n
-// return fn;
 
-// }
 
-// public static void main (String args[]){
-// System.out.println( fact(5));
 
-// }
-
-// }
 
 // sum of first n numbers:
 
+
+
+
 // public class recursion{
-// public static int printsum(int n){
 
-// if(n==1){
-// return 1;
-// }
-// int snm1 = printsum(n-1);
-// int sn = n + printsum(n-1);
-// return sn;
+//     public static int Calcsumm(int n){
 
-// }
-// public static void main(String args[]){
+//         if(n ==1){
+//             return 1;
+//         }
 
-// System.out.println(printsum(10));
+//         int snm1 = Calcsumm(n-1);
+//         int sn = n + snm1;
+//         return sn;
+//     }
+    
+//     public static void main(String args[]){
+
+//         System.out.println(Calcsumm(5));
+
+//     }
 // }
-// }
+
+
+
 
 // fibonacci series:
 
+
+
 // public class recursion{
 
-// public static int fibo(int n){
+//     public static int fibo(int n){
 
-// if(n==0 || n==1){
-// return n ;
+//         if(n==0 || n==1){
+//             return n;
+//         }
+//         int fnm1  = fibo(n-1);
+//         int fnm2 = fibo(n-2);
+
+//         int fn = fnm1 +fnm2;
+//         return fn;
+//     }
+//     public static void main (String args[]){
+
+//         System.out.println(fibo(25));
+//     }
 // }
 
-// int fnm1 = fibo(n-1);
-// int fnm2 = fibo(n-2);
 
-// int fn = fnm1 + fnm2;
 
-// return fn;
-// }
 
-// public static void main(String args[]){
-// System.out.println(fibo(28));
-// }
-// }
+
 
 // checking if array is sorted or not:
 
-// public class recursion{
-// public static boolean issorted(int arr[], int i){ //i is index
 
-// //base case
 
-// if(i == arr.length-1){
-// return true;
+
+// public class Recursion {
+
+//     public static boolean isSorted(int arr[], int i) {
+//         // Base case
+//         if (i == arr.length - 1) {
+//             return true;
+//         }
+
+//         if (arr[i] > arr[i + 1]) {
+//             return false;
+//         }
+
+//         return isSorted(arr, i + 1);
+//     }
+
+//     public static void main(String args[]) {
+//         int arr[] = {1, 2, 3, 4, 5};
+//         System.out.println(isSorted(arr, 4));
+//     }
 // }
 
-// if(arr[i]>arr[i+1]){
-// return false;
 
-// }
 
-// return issorted(arr,i+1);
 
-// }
-
-// public static void main(String args[]){
-
-// int arr[] = {1,2,3,4,5};
-
-// System.out.println(issorted(arr,4));
-// }
-// }
+ 
 
 // v - 9 first occurence:
 
-// public class recursion{
 
-// public static int firstoccurence(int arr[] , int key , int i){
 
-// // base case
+// public class Recursion {
 
-// if(i == arr.length){
-// return -1;
+//     public static int firstOccurrence(int[] arr, int key, int i) {
+//         // Base case
+//         if (i == arr.length) {
+//             return -1;
+//         }
+
+//         // If the current element matches the key
+//         if (arr[i] == key) {
+//             return i;
+//         }
+
+//         // Recursive call to the next element
+//         return firstOccurrence(arr, key, i + 1);
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {3, 5, 2, 6, 5, 8, 3, 6};
+
+//         System.out.println(firstOccurrence(arr, 6, 0)); // Output: 3
+//     }
 // }
 
-// if(arr[i] == key){
-// return i;
-// }
 
-// return firstoccurence(arr,key,i+1);
-// }
 
-// public static void main(String args[]){
 
-// int arr[] = {3,5,2,6,5,8,3,6};
-
-// System.out.println(firstoccurence(arr , 6, 0));
-
-// }
-// }
 
 // v -10 : last occurence: need to revise again:
+
+
+
 
 // public class recursion{
 
@@ -212,127 +247,174 @@ public class recursion {
 // }
 // }
 
+
+
+
+
 // v-11: print x to the power n:
 
-// public class recursion {
 
-// public static int power(int x, int n) {
 
-// if (n == 0) {
-// return 1;
+
+
+
+// public class Recursion {
+
+ 
+//     public static int power(int x, int n) {
+
+//         // Base case
+//         if (n == 0) {
+//             return 1;
+//         }
+ 
+//         // Recursive call
+//         return x * power(x, n - 1);
+//     }
+
+//     public static void main(String[] args) {
+//         System.out.println(power(2, 4)); // Output: 16
+//     }
 // }
 
-// // int xnm1 = power(x,n-1);
-// // int xn = x * xnm1;
-// // return xn;
 
-// return x * power(x, n - 1);
-// }
 
-// public static void main(String args[]) {
 
-// System.out.println(power(2, 4));
 
-// }
-// }
 
 // v -11
 
 // optimised power
 
-// public class recursion{
 
-// public static int optimisedpower(int a,int n){
-// if(n==0){
-// return 1;
+
+
+// public class Recursion {
+
+//     public static int optimisedPower(int a, int n) {
+
+//         if(n < 0) {
+
+//             n = 1/n;
+
+//             if(n == Integer.MIN_VALUE){
+//                 return a * optimisedPower(a,Integer.MIN_VALUE);
+//             }
+//             n = -n;
+//         }
+
+
+
+//         if (n == 0) {
+//             return 1;
+//         }
+
+//         int halfPower = optimisedPower(a, n / 2);
+//         int halfPowerSq = halfPower * halfPower;
+
+//         if (n % 2 != 0) {
+//             halfPowerSq = a * halfPowerSq;
+//         }
+
+//         return halfPowerSq;
+//     }
+
+//     public static void main(String args[]) {
+//         int a = 2;
+//         int n = -10;
+
+//         System.out.println(optimisedPower(a, n));
+//     }
 // }
 
-// int halfpower = optimisedpower(a,n/2);
-// int halfpowersq = halfpower * optimisedpower(a,n/2);
-// if(n % 2 != 0){
-// halfpowersq = a * halfpowersq;
-// }
-// return halfpowersq;
-// }
 
-// public static void main (String args[]){
 
-// int a = 2;
-// int n=10;
 
-// System.out.println(optimisedpower(a,n));
 
-// }
-// }
 
 // // Tiling problem:
 
-// public class recursion{
 
-// public static int tilingProblem(int n){ // 2* N problem same for 4*n
 
-// // base case
+// public class Recursion {
 
-// if(n==0 || n==1){
-// return 1;
+//     public static int TilingProblem(int n) { // 2 x n(Floor Size)
+
+
+//         //BAse case:
+
+//         if(n==0 || n==1){
+//             return 1;
+//         }
+
+
+//         //kaam
+
+//         //Vertical Choice:
+//         int fnm1 = TilingProblem(n-1);
+
+//         //horizontal Choice:
+//         int fnm2 = TilingProblem(n-2);
+
+//         //Total ways:
+//         int totalWays = fnm1 + fnm2;
+
+//         return totalWays;
+
 // }
 
-// // // vertical choice :
-// // int fnm1 = tilingProblem(n-1);
+//     public static void main(String[] args) {
 
-// // // horizontal case :
-// // int fnm2 = tilingProblem(n-2);
-
-// // int totalways = fnm1 + fnm2;
-
-// // return totalways;
-
-// return tilingProblem(n-1) + tilingProblem(n-2);
-
+//         System.out.println(TilingProblem(4));
+//     }
 // }
-// public static void main (String args[]){
 
-// System.out.println(tilingProblem(4));
-// }
-// }
+
+
+
+
 
 // remove duplicates:
 
-// public class recursion{
 
-// public static void removeduplicates(String str, int idx , StringBuilder
-// newStr , boolean map[]){
 
-// if( idx == str.length()){
-// System.out.println(newStr);
-// return;
+// public class Recursion {
+
+//     public static void removeDuplicates(String str, int idx, StringBuilder newStr, boolean[] map) {
+
+//         if (idx == str.length()) {
+//             System.out.println(newStr);
+//             return;
+//         }
+
+//         // Work
+//         char currChar = str.charAt(idx);
+
+//         if (map[currChar - 'a']) {
+//             // Duplicate character
+//             removeDuplicates(str, idx + 1, newStr, map);
+            
+//         } else {
+//             map[currChar - 'a'] = true;
+//             removeDuplicates(str, idx + 1, newStr.append(currChar), map);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "mannaannaann";
+//         removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+//     }
 // }
-// //kaam:
 
-// char currChar = str.charAt(idx);
 
-// if(map[currChar - 'a'] == true){
 
-// //duplicate
-// removeduplicates(str, idx+1,newStr , map);
 
-// }
 
-// else{
-// map[currChar - 'a'] = true;
-// removeduplicates(str, idx+1,newStr.append(currChar) , map);
-
-// }
-// }
-
-// public static void main(String args[]){
-
-// String str = "mannaannaann";
-// removeduplicates(str ,0,new StringBuilder("") , new boolean [26]);
-
-// }}
 
 // friernds problem:
+
+
+
 
 public class recursion {
 
@@ -365,6 +447,11 @@ public class recursion {
 
     }
 }
+
+
+
+
+
 
 // Binary String problem: for non consecutive 1:
 
