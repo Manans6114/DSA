@@ -416,72 +416,103 @@
 
 
 
-public class recursion {
+// public class Recursion {
 
-    public static int friendspairing(int n) {
+//     public static int friendspairing(int n) {
 
-        // base case
-        if (n == 1 || n == 2) {
-            return n;
-        }
+//         // base case
+//         if (n == 1 || n == 2) {
+//             return n;
+//         }
 
-        // choice
-        // single
+//         // choice
+//         // single
 
-        int fnm1 = friendspairing(n - 1);
+//         int fnm1 = friendspairing(n - 1); //first case of being single
 
-        // pair
-        int fnm2 = friendspairing(n - 2);
+//         // pair
+//         int fnm2 = friendspairing(n - 2);
 
-        int pairways = (n - 1) * fnm2;
+//         int pairways = (n - 1) * fnm2;   // second case of being in pairs
 
-        // totways
-        int totways = fnm1 + pairways;
+//         // totways
+//         int totways = fnm1 + pairways;
 
-        return totways;
-    }
+//         return totways;
+//     }
 
-    public static void main(String args[]) {
+//     public static void main(String args[]) {
 
-        System.out.println(friendspairing(3));
+//         System.out.println(friendspairing(3));
 
-    }
-}
+//     }
+// }
 
 
+
+// public class Recursion{
+
+//     public static int friendspairing(int n){
+
+//         if(n==1 || n==2){
+//             return n;
+//         }
+
+//         //single choice :
+
+//         int fnm1 = friendspairing(n-1);
+
+//         //pairchoice:
+
+//         int fnm2 = friendspairing(n-2);
+
+//         int pairways = (n-1)* fnm2;
+
+//         //totways:
+//         int totways = fnm1 + pairways;
+
+//         return totways;
+//     }
+
+//     public static void main(String args[]){
+
+//         System.out.println(friendspairing(3));
+
+//     }
+// }
 
 
 
 
 // Binary String problem: for non consecutive 1:
 
-// public class recursion{
 
-// public static void BinaryString(int n, int Lastplace , String str){
+// public class Recursion {
 
-// //base case:
+//     public static void BinaryString(int n, int lastPlace, String str) {
 
-// if(n == 0){
-// System.out.println(str);
-// return;
+//         // Base case
+//         if (n == 0) {
+//             System.out.println(str);
+//             return;
+//         }
+
+//         // Recursive calls
+//         BinaryString(n - 1, 0, str + "0");
+
+//         if (lastPlace == 0) {
+//             BinaryString(n - 1, 1, str + "1");
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         BinaryString(3, 0, "");
+//     }
 // }
 
-// //kaam
 
-// BinaryString(n-1,0,str+"0");
 
-// if(Lastplace == 0){
 
-// BinaryString(n-1,1,str+"1");
-// }
-// }
-
-// public static void main(String args[]){
-
-// BinaryString(3 , 0, "");
-
-// }
-// }
 
 // Binary String problem : for non consecutive zeros:
 
